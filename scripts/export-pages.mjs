@@ -7,7 +7,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const root = process.cwd();
-const base = process.env.PAGES_BASE_PATH || '/Ethos-Quest-Markup';
+const base = process.env.PAGES_BASE_PATH || '/Ethos-Quest';
 const out = path.join(root, 'pages-out');
 
 console.log(`Building with basePath ${base}...`);

@@ -33,18 +33,21 @@ export const ethosPhotoOptions = {
   o('Lower Manhattan', 'pe-lower-manhattan', 'The Lower Manhattan skyline under a blue sky'),
  ],
  'family-enterprise-leaders': [
-  o('The institution', 'family-katzs', 'A long-established family delicatessen on the Lower East Side'),
-  o('The old sign', 'family-cafeteria', 'The faded sign of an old red-brick New York cafeteria'),
-  o('The corner shop', 'family-corner-deli', 'A corner deli beneath fire escapes on a New York street'),
+  o('The San Remo over Central Park', 'family-san-remo', 'The twin towers of the San Remo rising above Central Park under a bright sky'),
+  o('Gramercy Park', 'family-gramercy-park', 'Elegant townhouses on Gramercy Park South in summer sun'),
+  o('The family home', 'family-brownstone-door', 'The arched double doors and stoop of a classic New York brownstone'),
  ],
  'entrepreneurs-and-investors': [
   o('Park and skyline', 'investors-park-skyline', 'A sunny park with the New York skyline beyond the trees'),
   o('From a Brooklyn park', 'investors-brooklyn-park', 'Manhattan across the water from a green Brooklyn park'),
  ],
  'public-company-executives': [
+  o('The Exchange on a busy day', 'public-nyse-busy-day', 'The New York Stock Exchange on a busy day, flags out and skyscrapers behind'),
+  o('On Wall Street', 'public-nyse-wall-street', 'The New York Stock Exchange on Wall Street with people passing'),
+  o('The flag', 'public-nyse-flag', 'The Stock Exchange façade draped in a giant American flag'),
+  o('The columns', 'public-nyse-columns', 'American flags along the Stock Exchange columns in daylight'),
   o('The screen', 'public-chart-screen', 'A man standing before a large chart display in a dark room'),
   o('The desk', 'public-trading-desk', 'Two men discussing a position at a trading desk'),
-  o('Wall Street', 'public-wall-street', 'The Wall Street street sign in black and white'),
  ],
  // Methodology page hero: unmistakably New York.
  methodHero: [

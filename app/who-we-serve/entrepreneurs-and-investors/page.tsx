@@ -1,5 +1,5 @@
 import EthosAudiencePage from '../../ethos/EthosAudiencePage';
 import { ethosAudiences, audienceMetadata } from '../../ethos/EthosAudiences';
-const audience = ethosAudiences.find(a => a.slug === 'fund-managers')!;
+const audience = ethosAudiences.find(a => a.slug === 'entrepreneurs-and-investors')!;
 export const metadata = audienceMetadata(audience);
 export default function Page() { return <EthosAudiencePage audience={audience} />; }

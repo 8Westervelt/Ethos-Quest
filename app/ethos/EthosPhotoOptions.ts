@@ -23,28 +23,28 @@ export const ethosPhotoOptions = {
   o('At the subway entrance', 'about-hero-subway', 'Two colleagues talking at a New York subway entrance'),
  ],
  // Who We Serve landing page heroes, keyed by profile slug (see EthosAudiences.ts).
+ 'founder-ceos': [
+  o('Park Avenue in bloom', 'founders-park-ave-blossoms', 'Park Avenue in spring, cherry blossoms lining the street in the sun'),
+  o('Park Ave and 53rd', 'founders-park-ave-53rd', 'People crossing Park Avenue at East 53rd Street'),
+ ],
  'private-equity-ceos': [
   o('Wall Street', 'pe-wall-street', 'Two professionals talking outside the New York Stock Exchange'),
   o('Midtown from above', 'pe-midtown-skyline', 'The Midtown Manhattan skyline from high up on a clear day'),
   o('Lower Manhattan', 'pe-lower-manhattan', 'The Lower Manhattan skyline under a blue sky'),
  ],
- 'fund-managers': [
-  o('The screen', 'fund-chart-screen', 'A man standing before a large chart display in a dark room'),
-  o('The desk', 'fund-trading-desk', 'Two men discussing a position at a trading desk'),
-  o('Wall Street', 'fund-wall-street', 'The Wall Street street sign in black and white'),
- ],
- 'founders-scaling': [
-  o('Park Avenue in bloom', 'founders-park-ave-blossoms', 'Park Avenue in spring, cherry blossoms lining the street in the sun'),
-  o('Park Ave and 53rd', 'founders-park-ave-53rd', 'People crossing Park Avenue at East 53rd Street'),
- ],
- 'family-business-leaders': [
+ 'family-enterprise-leaders': [
   o('The institution', 'family-katzs', 'A long-established family delicatessen on the Lower East Side'),
   o('The old sign', 'family-cafeteria', 'The faded sign of an old red-brick New York cafeteria'),
   o('The corner shop', 'family-corner-deli', 'A corner deli beneath fire escapes on a New York street'),
  ],
- 'leaders-facing-an-exit': [
-  o('Park and skyline', 'exit-park-skyline', 'A sunny park with the New York skyline beyond the trees'),
-  o('From a Brooklyn park', 'exit-brooklyn-park', 'Manhattan across the water from a green Brooklyn park'),
+ 'entrepreneurs-and-investors': [
+  o('Park and skyline', 'investors-park-skyline', 'A sunny park with the New York skyline beyond the trees'),
+  o('From a Brooklyn park', 'investors-brooklyn-park', 'Manhattan across the water from a green Brooklyn park'),
+ ],
+ 'public-company-executives': [
+  o('The screen', 'public-chart-screen', 'A man standing before a large chart display in a dark room'),
+  o('The desk', 'public-trading-desk', 'Two men discussing a position at a trading desk'),
+  o('Wall Street', 'public-wall-street', 'The Wall Street street sign in black and white'),
  ],
  // Methodology page hero: unmistakably New York.
  methodHero: [

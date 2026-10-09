@@ -17,7 +17,7 @@ Public profiles reviewed September 8, 2026. Pages created as the three coach tem
 ## Bassel Hamwi
 - Career, governance and family-business interests, degrees and Harvard Business School alumnus status: https://hamwiconsult.com/about/
 - ACC (April 2024–April 2027) and Advanced Certified Personal and Executive Coach (June 2024): https://www.linkedin.com/in/basselhamwi
-- Portrait: https://hamwiconsult.com/wp-content/uploads/2023/01/bassel-about-500x500-1.jpeg
+- Portrait: supplied by the EthosQuest team, October 9, 2026 (stage photo, cropped to 4:5). Previously https://hamwiconsult.com/wp-content/uploads/2023/01/bassel-about-500x500-1.jpeg
 - Local image: public/media/coaches/bassel-hamwi.jpg
 - Harvard affiliation is described as alumnus, not as a Harvard MBA. Former roles use published date ranges.
 

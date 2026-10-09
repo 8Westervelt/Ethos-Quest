@@ -1,9 +1,13 @@
 // Who We Serve profiles (ETHOS-9). Each profile is a card on the home page and a landing page at /who-we-serve/<slug>.
+// Ordered by the priority client segments in the EQ Target Client Strategy (October 2026); the first two fill the home page's top row.
+// Each lede names the segment's indicative profile, and each `work` entry answers one of its core needs.
 // Draft copy for Alexia to rewrite. Each profile's hero photo options live in EthosPhotoOptions.ts under its slug.
 export type EthosAudience = {
- slug: 'private-equity-ceos' | 'fund-managers' | 'founders-scaling' | 'family-business-leaders' | 'leaders-facing-an-exit';
+ slug: 'founder-ceos' | 'private-equity-ceos' | 'family-enterprise-leaders' | 'entrepreneurs-and-investors' | 'public-company-executives';
  name: string;
  card: string;
+ // The one core need featured in the home page business case: [need, the cost when unmet, what changes when met].
+ need: [string, string, string];
  lines: [string, string];
  lede: string;
  pressures: [string, string][];
@@ -13,11 +17,37 @@ export type EthosAudience = {
 
 export const ethosAudiences: EthosAudience[] = [
  {
+  slug: 'founder-ceos',
+  name: 'Founders and CEOs',
+  card: 'Scaling what you started, making the calls only you can make, while the company outgrows the role you built for yourself.',
+  need: ['Identity', 'The company has become who you are. Every decision feels personal, delegating feels like loss, and the business cannot grow past the limits of its founder.', 'You can see where you end and the company begins. Decisions get cleaner, the team takes real ownership, and the company grows beyond you.'],
+  lines: ['Founders and CEOs', 'Growth Without Losing Yourself'],
+  lede: 'You founded the company, you still lead it, and it has grown well beyond its beginnings, whether it is worth fifty million or more than a billion. The work is about scaling well, choosing clearly, and staying yourself while the company changes around you.',
+  pressures: [
+   ['Everything at once', 'Too many initiatives, resources spread thin, always busy, and little that actually gets finished.'],
+   ['Outgrowing your own role', 'What made the company work in its early years is not what it needs now. That includes you.'],
+   ['A company that is also your identity', 'When the business has your name on every decision, it becomes hard to tell where it ends and you begin.'],
+   ['Relationships under strain', 'Co-founders, early employees, and family have watched the company take more than its share. Those relationships need attention too.'],
+  ],
+  work: [
+   ['Scaling', 'Choosing fewer things and seeing them through, and building the focus and the team the next stage requires.'],
+   ['Strategic choices', 'Room to test the decisions only you can make, about direction, capital, and people, before you commit the company to them.'],
+   ['Identity', 'Seeing where you end and the company begins, so your role can change without feeling like a loss of self.'],
+   ['Relationships', 'Attention to the co-founders, team, and family who carry the company with you, and to how you show up with them.'],
+  ],
+  questions: [
+   ['My company has tripled in two years and I’m busier than ever but less effective. Would coaching help?', 'Very often, yes. The work looks at where your attention is actually going and why, then helps you build the focus the next stage requires.'],
+   ['I’m a founder and my board is talking about bringing in an experienced CEO. How should I think about it?', 'Start with what you want, separately from what you fear. Coaching gives you room to look at the decision honestly before it is made for you.'],
+   ['My co-founder and I no longer agree on where the company is going. Can coaching help?', 'Coaching works with you, not with the partnership as a whole. It can help you get clear on what you want, what you are willing to change, and how to have the conversation you have been avoiding.'],
+  ],
+ },
+ {
   slug: 'private-equity-ceos',
-  name: 'Private Equity CEOs',
+  name: 'Private Equity-Backed CEOs',
   card: 'A finite hold period, an explicit value-creation plan, and a board that measures every quarter against it.',
-  lines: ['Private Equity CEOs', 'Leading Against the Clock'],
-  lede: 'The hold period is finite, the plan is explicit, and every quarter is read against it. EthosQuest gives private equity-backed CEOs a place to think clearly about the decisions the plan does not settle.',
+  need: ['Investor dynamics', 'The sponsor wants pace, the organization needs steadiness, and the CEO is split between them. Board conversations turn defensive, and energy goes into managing perceptions while the plan drifts.', 'The CEO brings a clear view of their own to the board. The sponsor relationship becomes candid, and attention returns to creating value.'],
+  lines: ['Private Equity-Backed CEOs', 'Leading Against the Clock'],
+  lede: 'You lead a substantial portfolio company. The hold period is finite, the plan is explicit, and every quarter is read against it. The work is about performance, the relationship with your investors, and the leader the plan needs you to become.',
   pressures: [
    ['A clock that never stops', 'Three to five years to deliver a value-creation plan you may not have written. Every quarter is measured against it, and drift is noticed quickly.'],
    ['Two sets of expectations', 'The sponsor wants pace and visibility. The organization needs steadiness and a reason to follow. Holding both without splitting yourself between them is the job.'],
@@ -25,9 +55,9 @@ export const ethosAudiences: EthosAudience[] = [
    ['Your own next chapter', 'The exit is on the calendar from day one. What it means for you, and what comes after, rarely gets discussed.'],
   ],
   work: [
-   ['Clarity on priorities', 'Separating what the plan requires from what the noise demands, so attention goes where value is actually created.'],
-   ['Steadiness under scrutiny', 'Room to examine the patterns that surface under pressure before they show up in the board pack.'],
-   ['Your own position with the board', 'Preparing for the conversations with the sponsor and the deal team that matter most, from a clear sense of what you think.'],
+   ['Performance', 'Separating what the plan requires from what the noise demands, so attention goes where value is actually created.'],
+   ['Investor dynamics', 'Preparing for the conversations with the sponsor, the board, and the deal team that matter most, and holding your own view within them.'],
+   ['Leadership evolution', 'Growing into what each phase of the plan asks of you, and seeing the patterns that surface under pressure before they show up in the board pack.'],
   ],
   questions: [
    ['I’m a portfolio company CEO two years into a five-year hold and the plan is slipping. Would coaching help?', 'It can. The work starts with what is actually driving the slippage, including what may be getting avoided, then turns to the decisions in front of you. The aim is clearer judgment, not a new set of slides.'],
@@ -35,54 +65,12 @@ export const ethosAudiences: EthosAudience[] = [
   ],
  },
  {
-  slug: 'fund-managers',
-  name: 'Fund Managers',
-  card: 'Responsible for other people’s capital, judged on every call, and rarely allowed to show doubt.',
-  lines: ['Fund Managers', 'Judgment Under Scrutiny'],
-  lede: 'You allocate capital on behalf of others and are measured on every decision. EthosQuest gives fund managers a confidential space to examine the judgment behind the decisions, not just the outcomes.',
-  pressures: [
-   ['Conviction on demand', 'Investors and teams expect certainty. Doubt is part of good judgment, but there is rarely anywhere to voice it.'],
-   ['Results that arrive late', 'Decisions made today are judged years from now, and the feedback in between is noisy.'],
-   ['A team of strong opinions', 'Partners and analysts are talented and independent. Building a culture where they challenge each other well is its own work.'],
-   ['The next fund', 'Fundraising, performance, and reputation run together, and the pressure follows you home.'],
-  ],
-  work: [
-   ['Seeing your own patterns', 'How you respond to losses, to wins, and to people who disagree with you shapes the portfolio more than any model.'],
-   ['Thinking out loud, safely', 'A thinking partner outside the firm and outside the market, with no position to protect.'],
-   ['The long game', 'Decisions about the firm, the team, and your own role over a career, not only the next allocation.'],
-  ],
-  questions: [
-   ['I run a fund and I keep second-guessing a large position I still believe in. Is that something coaching can help with?', 'Coaching does not give investment advice. What it can do is help you separate conviction from attachment, and see what is driving the second-guessing, so the decision is genuinely yours.'],
-   ['I lead a team of senior investors who rarely agree. Would coaching help me lead them?', 'Yes. The work looks at your own part in the dynamic, and at how you hold disagreement without either suppressing it or letting it stall decisions.'],
-  ],
- },
- {
-  slug: 'founders-scaling',
-  name: 'Founders Scaling',
-  card: 'Scaling from twenty million to three hundred million, with too many initiatives and too little finished.',
-  lines: ['Founders Scaling', 'Growth Without Losing Yourself'],
-  lede: 'Scaling from twenty million to three hundred million. Too many initiatives, resources spread thin, always busy, always chasing, nothing finished. The work is about focus, finishing, and building the capacity to slow down without disappearing.',
-  pressures: [
-   ['Everything at once', 'Too many initiatives, resources spread thin, always busy, and little that actually gets finished.'],
-   ['Outgrowing your own role', 'What made the company work at twenty million is not what it needs at three hundred. That includes you.'],
-   ['Letting go', 'Handing over decisions you have always made, and trusting people to make them differently.'],
-  ],
-  work: [
-   ['Focus and finishing', 'Choosing fewer things and seeing them through, starting with your own calendar.'],
-   ['The capacity to slow down', 'Learning to pause without feeling that the company will stall without you.'],
-   ['The leader the next stage needs', 'Seeing which of your strengths still serve the company, and which now get in its way.'],
-  ],
-  questions: [
-   ['My company has tripled in two years and I’m busier than ever but less effective. Would coaching help?', 'Very often, yes. The work looks at where your attention is actually going and why, then helps you build the focus the next stage requires.'],
-   ['I’m a founder and my board is talking about bringing in an experienced CEO. How should I think about it?', 'Start with what you want, separately from what you fear. Coaching gives you room to look at the decision honestly before it is made for you.'],
-  ],
- },
- {
-  slug: 'family-business-leaders',
-  name: 'Family Business Leaders',
-  card: 'Leading what a family built, or stewarding its wealth, where every business decision is also a family decision.',
-  lines: ['Family Business Leaders', 'Whose Life Are You Living?'],
-  lede: 'Whether you run the company a parent founded or lead the office that stewards the family’s wealth, decisions are quietly shaped by expectations no one says out loud. The work is about seeing whose life you are actually living, and choosing it.',
+  slug: 'family-enterprise-leaders',
+  name: 'Family Enterprise Leaders',
+  card: 'Principals and successors leading what a family built, where every business decision is also a family decision.',
+  need: ['Succession', 'Succession is postponed because it is personal. The next generation waits in uncertainty, governance stays unwritten, and the enterprise carries a risk no one will name.', 'Succession becomes a conversation rather than an avoidance. Roles are clear, the family can disagree well, and the enterprise has a future it can plan for.'],
+  lines: ['Family Enterprise Leaders', 'Whose Life Are You Living?'],
+  lede: 'You lead a substantial family enterprise, or you are the successor preparing to. Decisions are quietly shaped by expectations no one says out loud. The work is about succession, governance, and the family around both, and about seeing whose life you are actually living, and choosing it.',
   pressures: [
    ['An inherited standard', 'The business carries a parent’s expectations long after the handover, often without anyone saying so.'],
    ['Family at the table', 'Siblings, spouses, and shareholders who are also relatives make every business and investment decision a family one.'],
@@ -90,35 +78,63 @@ export const ethosAudiences: EthosAudience[] = [
    ['Governance without a playbook', 'Who decides, how, and with whose agreement often stays unwritten until it is tested.'],
   ],
   work: [
-   ['Seeing the patterns', 'Recognizing which choices are yours and which are inherited.'],
-   ['Clarity on your role', 'Whether you are family or a professional leader brought in to run things, understanding whose interests you serve and where your own judgment fits.'],
-   ['The difficult conversations', 'Preparing for the succession and family discussions that have been postponed for years.'],
+   ['Succession', 'Preparing to take over or to hand on, with clarity about what you want your role to become and what you want the next generation to inherit.'],
+   ['Governance', 'Making the unwritten explicit: who decides, how, and with whose agreement, and where your own judgment fits, whether you are family or a professional leader brought in to run things.'],
+   ['Family complexity', 'Recognizing which choices are yours and which are inherited, and preparing for the family conversations that have been postponed for years.'],
   ],
   questions: [
    ['I took over my father’s company and still feel I’m running it for him. Is that something coaching addresses?', 'Yes. It is one of the most common starting points. The work helps you see where his expectations still shape your decisions, so you can choose which ones to keep.'],
-   ['I’m 60 and run my family’s office, and my children don’t want to take it over. Would coaching help?', 'Yes. The work holds the practical questions about succession alongside the personal ones: what you want your role to become, what you want to hand on, and how to talk about it with your family.'],
+   ['I’m 60 and lead my family’s business, and my children don’t want to take it over. Would coaching help?', 'Yes. The work holds the practical questions about succession alongside the personal ones: what you want your role to become, what you want to hand on, and how to talk about it with your family.'],
    ['My siblings and I disagree about the future of the family business. Can coaching help?', 'Coaching works with you, not with the family as a group. It can help you get clear on your own position and how to hold it in those conversations.'],
   ],
  },
  {
-  slug: 'leaders-facing-an-exit',
-  name: 'Leaders Facing an Exit',
-  card: 'Selling something you built is not a transaction. Part of you goes with it.',
-  lines: ['Leaders Facing an Exit', 'What Comes After'],
-  lede: 'Selling something you built is not a transaction. Part of you goes with it. The work holds the identity transition alongside the practical decisions, and stays present for what comes after.',
+  slug: 'entrepreneurs-and-investors',
+  name: 'Entrepreneurs & Investors',
+  card: 'You have built, sold, or invested well. The question now is what the next chapter is for.',
+  need: ['Purpose', 'The milestones have been reached, yet the next move defaults to more of the last one. Time, capital, and talent drift toward whatever is in front of them.', 'Purpose comes into focus. Time and capital go toward what genuinely matters, and the next chapter is chosen rather than defaulted into.'],
+  lines: ['Entrepreneurs & Investors', 'What Comes Next'],
+  lede: 'You are a founder, an investor, or a former CEO who has built, sold, or invested your way to real independence. The question that remains is rarely financial: what all of it is for. The work is about reinvention, purpose, legacy, and fulfillment, on your own terms.',
   pressures: [
-   ['An identity tied to the company', 'For years, the business has answered the question of who you are.'],
-   ['Decisions with no second chance', 'Timing, buyers, terms, and your team’s future, all decided once.'],
-   ['The day after', 'The calendar empties, the phone goes quiet, and the next chapter has no plan.'],
+   ['Success that stops answering the question', 'The milestones have been reached. What they were meant to give you is less clear than it used to be.'],
+   ['An identity tied to what you built', 'For years, a company or a portfolio answered the question of who you are. After a sale or a step back, it no longer does.'],
+   ['Decisions with no second chance', 'Selling, stepping back, or starting again: choices about timing, people, and capital that are made once.'],
+   ['Few people to think with', 'Advisers, partners, and family all have a stake in what you decide. Very few have none.'],
   ],
   work: [
-   ['Clarity before signing', 'Knowing what you actually want from the sale, beyond the number.'],
-   ['Holding both sides', 'Making the practical decisions while giving the personal transition its due.'],
-   ['Building what comes next', 'Working out what gives your time meaning once the company no longer does.'],
+   ['Reinvention', 'Working out what you want the next chapter to be, rather than defaulting to more of the last one.'],
+   ['Purpose', 'Clarity on what genuinely matters to you now, and on where your time, energy, and judgment are best spent.'],
+   ['Legacy', 'Deciding what you want your work, your capital, and your name to stand for, including what you hand on to your family.'],
+   ['Fulfillment', 'Attention to the parts of life that achievement has crowded out, including relationships, well-being, and joy.'],
   ],
   questions: [
-   ['I’m a 55-year-old leader looking to sell my business. Would coaching help?', 'Yes. The work holds the practical decisions about the sale alongside the personal ones, so you sign knowing what you want and stay steady through what comes after.'],
+   ['I’m thinking about selling the business I built. Would coaching help?', 'Yes. The work holds the practical decisions about the sale alongside the personal ones, so you sign knowing what you want and stay steady through what comes after.'],
    ['I sold my company six months ago and feel lost. Is that normal?', 'It is very common, and rarely talked about. Coaching gives you space to understand what you have lost and to decide what you want to build next.'],
+   ['I’ve achieved what I set out to, but it doesn’t feel the way I expected. Can coaching help?', 'Yes. That gap is often where the most useful work begins: looking honestly at what you value now, and at what a fulfilling next chapter would actually involve.'],
+  ],
+ },
+ {
+  slug: 'public-company-executives',
+  name: 'Public Company CEOs',
+  card: 'Every decision is scrutinized, every quarter is reported, and very few people can be told the whole truth.',
+  need: ['Isolation', 'No one inside the company can be told the whole truth. Judgment narrows, blind spots grow, and pressure is carried alone until it shows up in decisions or in health.', 'A confidential thinking partner restores perspective. Decisions are tested before they are made in public, and the leader stays steady over years, not quarters.'],
+  lines: ['Public Company CEOs', 'Judgment in Public'],
+  lede: 'You are a sitting CEO or a senior executive of a listed company. Shareholders, analysts, a board, and thousands of employees are watching, and every quarter is reported. EthosQuest gives you a confidential place to think, away from every audience you answer to.',
+  pressures: [
+   ['Isolation at the top', 'The more senior the role, the fewer people tell you the truth, and the fewer you can be fully honest with.'],
+   ['Complexity without pause', 'Strategy, operations, regulators, and markets compete for attention at once, with little time to think between decisions.'],
+   ['Judgment in public', 'Decisions are read by shareholders, analysts, and the press, often before their effects are known.'],
+   ['Sustaining yourself', 'The role asks for resilience over years, not quarters, and the cost often lands outside the office.'],
+  ],
+  work: [
+   ['Isolation', 'A confidential thinking partner with no stake in the company, the board, or the share price, so you can say what you actually think.'],
+   ['Complexity', 'Stepping back from competing demands to see what matters most, and where your attention is genuinely needed.'],
+   ['Judgment', 'Examining the assumptions and patterns behind your decisions before they are tested in public.'],
+   ['Resilience', 'Building the steadiness to lead well for years, without the role consuming everything else.'],
+  ],
+  questions: [
+   ['I’m a public company CEO and there is no one inside the company I can speak to openly. Would coaching help?', 'Yes. That isolation is one of the most common reasons leaders begin. Coaching gives you a confidential partner with no position to protect, so you can think out loud and decide more clearly.'],
+   ['I’ve just joined the executive team of a listed company. Where would we start?', 'With what the role asks of you, what you bring to it, and what you want from it. From there, the work follows the decisions and relationships in front of you.'],
   ],
  },
 ];

@@ -44,8 +44,8 @@ Three Pexels candidates per slot, resized to 2000px wide, in public/media/option
 - Home, Private Inquiry panel: panel-inquiry-library-lion https://www.pexels.com/photo/1570607/ (mirrored so the lion faces left) · panel-inquiry-grand-central https://www.pexels.com/photo/1570604/
 - For Leaders, The Lens: ceo-lens-wall-street https://www.pexels.com/photo/13801854/ · ceo-lens-fifth-ave https://www.pexels.com/photo/4559741/ · ceo-lens-bryant-park https://www.pexels.com/photo/4559618/
 - About hero: about-hero-hudson-yards https://www.pexels.com/photo/8554356/ · about-hero-subway https://www.pexels.com/photo/4964763/
-- Who We Serve, Private Equity CEOs: pe-wall-street https://www.pexels.com/photo/4964783/ · pe-midtown-skyline https://www.pexels.com/photo/9304863/ · pe-lower-manhattan https://www.pexels.com/photo/20847397/
-- Who We Serve, Fund Managers: fund-chart-screen https://www.pexels.com/photo/7567522/ · fund-trading-desk https://www.pexels.com/photo/5831706/ · fund-wall-street https://www.pexels.com/photo/6015353/
-- Who We Serve, Founders Scaling: founders-park-ave-blossoms https://unsplash.com/photos/gQVrjMnr_zE (Unsplash) · founders-park-ave-53rd https://unsplash.com/photos/3okb4QRgWgo (Unsplash)
-- Who We Serve, Family Business Leaders: family-katzs https://www.pexels.com/photo/14134120/ (shows Katz's Delicatessen signage) · family-cafeteria https://www.pexels.com/photo/1652295/ · family-corner-deli https://www.pexels.com/photo/20846701/
-- Who We Serve, Leaders Facing an Exit: exit-park-skyline https://www.pexels.com/photo/13399314/ · exit-brooklyn-park https://www.pexels.com/photo/28448969/
+- Who We Serve, Founders and CEOs: founders-park-ave-blossoms https://unsplash.com/photos/gQVrjMnr_zE (Unsplash) · founders-park-ave-53rd https://unsplash.com/photos/3okb4QRgWgo (Unsplash)
+- Who We Serve, Private Equity-Backed CEOs: pe-wall-street https://www.pexels.com/photo/4964783/ · pe-midtown-skyline https://www.pexels.com/photo/9304863/ · pe-lower-manhattan https://www.pexels.com/photo/20847397/
+- Who We Serve, Family Enterprise Leaders: family-katzs https://www.pexels.com/photo/14134120/ (shows Katz's Delicatessen signage) · family-cafeteria https://www.pexels.com/photo/1652295/ · family-corner-deli https://www.pexels.com/photo/20846701/
+- Who We Serve, Entrepreneurs & Investors: investors-park-skyline https://www.pexels.com/photo/13399314/ · investors-brooklyn-park https://www.pexels.com/photo/28448969/
+- Who We Serve, Public Company CEOs: public-chart-screen https://www.pexels.com/photo/7567522/ · public-trading-desk https://www.pexels.com/photo/5831706/ · public-wall-street https://www.pexels.com/photo/6015353/

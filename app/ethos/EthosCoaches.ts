@@ -27,7 +27,7 @@ export const coaches = [
   bio:['Bassel brings a financial markets and operating leadership perspective to executive coaching. His career spans banking, investment, and private equity, with a particular interest in governance, family business, and supporting senior leaders.', 'He founded and led Bank Audi Syria from 2005 to 2014, headed the IFC MENA Fund from 2014 to 2022, and served on the YPO Global Board from 2018 to 2022. These experiences inform his understanding of organizational responsibility and leadership under pressure.'],
   qualifications:[['Associate Certified Coach (ACC)','International Coaching Federation'],['Advanced Certified Personal and Executive Coach','College of Executive Coaching · ICF Level 2/ACTP'],['MBA in International Finance','University of North Texas'],['BBA in Business Computer Information Systems and Organizational Management','University of North Texas'],['Business school alumnus','Harvard Business School']],
   sources:[['Professional background & education','https://hamwiconsult.com/about/'],['Coaching credentials','https://www.linkedin.com/in/basselhamwi']],
-  photoSource:'https://hamwiconsult.com/wp-content/uploads/2023/01/bassel-about-500x500-1.jpeg',
+  photoSource:'https://www.ethosquest.com/media/coaches/bassel-hamwi.jpg',
  },
 ];
 export type EthosCoach = typeof coaches[number];

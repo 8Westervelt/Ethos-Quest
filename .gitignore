@@ -43,3 +43,7 @@ yarn-error.log*
 
 # GitHub Pages export (published to the gh-pages branch)
 /pages-out/
+
+# Team source files, not for the public repo
+*.pdf
+WhatsApp Image *

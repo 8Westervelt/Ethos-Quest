@@ -15,6 +15,7 @@ import {
  methodStructure, methodChange, methodArcs, methodGraduation, methodReadiness, methodValues, methodStance, methodOrigin, methodHuman, methodTenets,
 } from './EthosMethod';
 import { basselProfile, basselFigures, basselRecognition, basselCareer } from './EthosBassel';
+import { ethosAudiences, audiencePath } from './EthosAudiences';
 import { usePhotoOption } from './EthosPhotoPicker';
 
 const space = 'px-6 py-20 md:px-12 md:py-24 lg:px-20';
@@ -76,13 +77,16 @@ export function EthosCapacity({ full = false }: { full?: boolean }) {
  </section>;
 }
 
-/* The business case: five leadership patterns, expandable. */
+/* The business case, expandable. Home: each priority client and the core need it brings. For Leaders (full): five leadership patterns. */
 export function EthosPatterns({ full = false }: { full?: boolean }) {
  const [active, setActive] = useState<number | null>(full ? 0 : null);
+ const rows: { title: string; need?: string; cost: string; closes: string; href?: string }[] = full
+  ? methodPatterns.map(([title, cost, closes]) => ({ title, cost, closes }))
+  : ethosAudiences.map(a => ({ title: a.name, need: a.need[0], cost: a.need[1], closes: a.need[2], href: audiencePath(a) }));
  return <section className={space + (full ? ' ethos-sand' : '')}><div className={wrap}>
-  <EthosReveal className="grid items-end gap-6 md:grid-cols-[1fr_340px]"><div><Kicker>The Business Case</Kicker><h2 className={h2 + ' mt-5 max-w-[760px]'}>When the leader changes, the business changes.</h2></div><p className={small + ' max-w-[320px]'}>Five integrity gaps we see in senior leaders, the cost each carries, and what happens when it closes.</p></EthosReveal>
-  <div className={'mt-12 border-t ' + line}>{methodPatterns.map(([title, cost, closes], i) => <div key={title} className={'border-b ' + line}><h3><button id={'pattern-' + i} aria-expanded={active === i} aria-controls={'pattern-panel-' + i} onClick={() => setActive(active === i ? null : i)} className="group flex w-full items-center justify-between gap-8 bg-transparent py-6 text-left text-[#132040] transition-colors hover:text-[#9E1B34]"><span className="text-[22px] leading-[1.3] md:text-[28px]">{title}</span><motion.span animate={{ rotate: active === i ? 45 : 0 }} className="shrink-0 text-[#9E1B34]"><Plus size={24} strokeWidth={1.4} /></motion.span></button></h3>
-   <AnimatePresence initial={false}>{active === i && <motion.div key={'p' + i} id={'pattern-panel-' + i} role="region" aria-labelledby={'pattern-' + i} initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.5, ease: ethosEase }} className="overflow-hidden"><div className="grid gap-8 pb-9 md:grid-cols-2 md:gap-16"><div><Kicker>The cost</Kicker><p className={small + ' mt-4'}>{cost}</p></div><div><Kicker>When the gap closes</Kicker><p className="mt-4 text-[15px] leading-[1.75] text-[#132040]/90">{closes}</p></div></div></motion.div>}</AnimatePresence>
+  <EthosReveal className="grid items-end gap-6 md:grid-cols-[1fr_340px]"><div><Kicker>The Business Case</Kicker><h2 className={h2 + ' mt-5 max-w-[760px]'}>When the leader changes, the business changes.</h2></div><p className={small + ' max-w-[320px]'}>{full ? 'Five integrity gaps we see in senior leaders, the cost each carries, and what happens when it closes.' : 'The leaders we serve, the core need each brings, what it costs when it goes unmet, and what changes when it is met.'}</p></EthosReveal>
+  <div className={'mt-12 border-t ' + line}>{rows.map(({ title, need, cost, closes, href }, i) => <div key={title} className={'border-b ' + line}><h3><button id={'pattern-' + i} aria-expanded={active === i} aria-controls={'pattern-panel-' + i} onClick={() => setActive(active === i ? null : i)} className="group flex w-full items-center justify-between gap-8 bg-transparent py-6 text-left text-[#132040] transition-colors hover:text-[#9E1B34]"><span className="flex flex-col gap-2 md:flex-row md:items-baseline md:gap-6"><span className="text-[22px] leading-[1.3] md:text-[28px]">{title}</span>{need && <span className="font-accent text-[12px] uppercase tracking-[0.22em] text-[#9E1B34]">Core need: {need}</span>}</span><motion.span animate={{ rotate: active === i ? 45 : 0 }} className="shrink-0 text-[#9E1B34]"><Plus size={24} strokeWidth={1.4} /></motion.span></button></h3>
+   <AnimatePresence initial={false}>{active === i && <motion.div key={'p' + i} id={'pattern-panel-' + i} role="region" aria-labelledby={'pattern-' + i} initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.5, ease: ethosEase }} className="overflow-hidden"><div className="grid gap-8 pb-9 md:grid-cols-2 md:gap-16"><div><Kicker>The cost</Kicker><p className={small + ' mt-4'}>{cost}</p></div><div><Kicker>{full ? 'When the gap closes' : 'When the need is met'}</Kicker><p className="mt-4 text-[15px] leading-[1.75] text-[#132040]/90">{closes}</p>{href && <a href={withBase(href)} className="mt-6 inline-flex items-center gap-2 border-b border-[#132040]/35 pb-1 text-[14px] transition-colors hover:text-[#9E1B34]">For {title}<ArrowUpRight size={16} strokeWidth={1.4} /></a>}</div></div></motion.div>}</AnimatePresence>
   </div>)}</div>
   <EthosReveal className="mt-12 grid gap-8 md:grid-cols-[1fr_1fr] md:gap-16"><p className="max-w-[600px] text-[21px] leading-[1.55] md:text-[24px]">{methodMultiplier}</p>{!full && <a href={withBase('/for-leaders')} className="flex items-end gap-8 self-end border-b border-[#132040]/35 pb-3 text-[14px] md:w-fit md:justify-self-end">What to expect as a client<ArrowUpRight size={18} strokeWidth={1.4} /></a>}</EthosReveal>
  </div></section>;

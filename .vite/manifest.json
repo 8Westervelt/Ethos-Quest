@@ -3,43 +3,43 @@
     "file": "Ethos-Quest/_next/static/chunks/EthosAudiences-CpV-tEXE.js",
     "name": "EthosAudiences"
   },
-  "_EthosCoaches-CwNNBUWg.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosCoaches-CwNNBUWg.js",
+  "_EthosCoaches-gvPSoM1o.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosCoaches-gvPSoM1o.js",
     "name": "EthosCoaches"
   },
-  "_EthosCta-yHu4bPKu.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosCta-yHu4bPKu.js",
+  "_EthosCta-ScyGMJU0.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosCta-ScyGMJU0.js",
     "name": "EthosCta",
     "imports": [
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosSections-DFxTfsYu.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosSections-D2l4roW0.js",
       "_framework-DykHcRpc.js"
     ]
   },
-  "_EthosFooter-w5oQb7jA.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosFooter-w5oQb7jA.js",
+  "_EthosFooter-CbUvsWGF.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosFooter-CbUvsWGF.js",
     "name": "EthosFooter",
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
-      "_EthosNav-Bmq6PC7_.js",
+      "_EthosNav-BP4gd8Y_.js",
       "_framework-DykHcRpc.js"
     ]
   },
-  "_EthosMethodSections-notj8UEq.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosMethodSections-notj8UEq.js",
+  "_EthosMethodSections-BusZcA7O.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosMethodSections-BusZcA7O.js",
     "name": "EthosMethodSections",
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
       "_EthosAudiences-CpV-tEXE.js",
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosPhotoPicker-Bfyp1kM2.js",
-      "_plus-Bgqptbhj.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosPhotoPicker-BmbGSROA.js",
+      "_plus-D9t_wT6S.js",
       "_framework-DykHcRpc.js"
     ]
   },
-  "_EthosNav-Bmq6PC7_.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosNav-Bmq6PC7_.js",
+  "_EthosNav-BP4gd8Y_.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosNav-BP4gd8Y_.js",
     "name": "EthosNav",
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
@@ -47,40 +47,40 @@
       "_framework-DykHcRpc.js"
     ]
   },
-  "_EthosPageHero-CM5OWUhV.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosPageHero-CM5OWUhV.js",
+  "_EthosPageHero-BGExzJIl.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosPageHero-BGExzJIl.js",
     "name": "EthosPageHero",
     "imports": [
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosSections-DFxTfsYu.js",
-      "_EthosPhotoPicker-Bfyp1kM2.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosSections-D2l4roW0.js",
+      "_EthosPhotoPicker-BmbGSROA.js",
       "_framework-DykHcRpc.js"
     ]
   },
-  "_EthosPhotoPicker-Bfyp1kM2.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosPhotoPicker-Bfyp1kM2.js",
+  "_EthosPhotoPicker-BmbGSROA.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosPhotoPicker-BmbGSROA.js",
     "name": "EthosPhotoPicker",
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
-      "_EthosNav-Bmq6PC7_.js",
+      "_EthosNav-BP4gd8Y_.js",
       "_framework-DykHcRpc.js"
     ]
   },
-  "_EthosSections-DFxTfsYu.js": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosSections-DFxTfsYu.js",
+  "_EthosSections-D2l4roW0.js": {
+    "file": "Ethos-Quest/_next/static/chunks/EthosSections-D2l4roW0.js",
     "name": "EthosSections",
     "imports": [
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosFooter-w5oQb7jA.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosFooter-CbUvsWGF.js",
       "_framework-DykHcRpc.js"
     ]
   },
-  "_MotionConfig-3Ta4IBbo.js": {
-    "file": "Ethos-Quest/_next/static/chunks/MotionConfig-3Ta4IBbo.js",
+  "_MotionConfig-Ci4zdEax.js": {
+    "file": "Ethos-Quest/_next/static/chunks/MotionConfig-Ci4zdEax.js",
     "name": "MotionConfig",
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
-      "_EthosNav-Bmq6PC7_.js",
+      "_EthosNav-BP4gd8Y_.js",
       "_framework-DykHcRpc.js"
     ]
   },
@@ -99,11 +99,11 @@
       "_framework-DykHcRpc.js"
     ]
   },
-  "_plus-Bgqptbhj.js": {
-    "file": "Ethos-Quest/_next/static/chunks/plus-Bgqptbhj.js",
+  "_plus-D9t_wT6S.js": {
+    "file": "Ethos-Quest/_next/static/chunks/plus-D9t_wT6S.js",
     "name": "plus",
     "imports": [
-      "_EthosNav-Bmq6PC7_.js"
+      "_EthosNav-BP4gd8Y_.js"
     ]
   },
   "_rolldown-runtime-EZ7h__Ob.js": {
@@ -111,171 +111,171 @@
     "name": "rolldown-runtime"
   },
   "app/ethos/EthosAboutPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosAboutPage-CYVrBVt6.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosAboutPage-CdGcRJ-q.js",
     "name": "EthosAboutPage",
     "src": "app/ethos/EthosAboutPage.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_EthosMethodSections-notj8UEq.js",
-      "_EthosCta-yHu4bPKu.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosPageHero-CM5OWUhV.js",
+      "_EthosMethodSections-BusZcA7O.js",
+      "_EthosCta-ScyGMJU0.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosPageHero-BGExzJIl.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosApproachPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosApproachPage-F_ZGhd5T.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosApproachPage-Bz8E7A9W.js",
     "name": "EthosApproachPage",
     "src": "app/ethos/EthosApproachPage.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_EthosMethodSections-notj8UEq.js",
-      "_EthosCta-yHu4bPKu.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosPageHero-CM5OWUhV.js",
+      "_EthosMethodSections-BusZcA7O.js",
+      "_EthosCta-ScyGMJU0.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosPageHero-BGExzJIl.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosAudiencePage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosAudiencePage-DPpySA9y.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosAudiencePage-CAHgL3SS.js",
     "name": "EthosAudiencePage",
     "src": "app/ethos/EthosAudiencePage.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_EthosAudiences-CpV-tEXE.js",
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosCta-yHu4bPKu.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosSections-DFxTfsYu.js",
-      "_EthosPageHero-CM5OWUhV.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosCta-ScyGMJU0.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosSections-D2l4roW0.js",
+      "_EthosPageHero-BGExzJIl.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosCoachPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosCoachPage-Dwq1EwY0.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosCoachPage-BN71xGVu.js",
     "name": "EthosCoachPage",
     "src": "app/ethos/EthosCoachPage.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosCoaches-CwNNBUWg.js",
-      "_EthosFooter-w5oQb7jA.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosCoaches-gvPSoM1o.js",
+      "_EthosFooter-CbUvsWGF.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosCoachesPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosCoachesPage-Cfk1np3M.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosCoachesPage-DcsyObnP.js",
     "name": "EthosCoachesPage",
     "src": "app/ethos/EthosCoachesPage.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosCoaches-CwNNBUWg.js",
-      "_EthosCta-yHu4bPKu.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosSections-DFxTfsYu.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosCoaches-gvPSoM1o.js",
+      "_EthosCta-ScyGMJU0.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosSections-D2l4roW0.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosFaqPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosFaqPage-CX8eNIZG.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosFaqPage-Br8aTBPs.js",
     "name": "EthosFaqPage",
     "src": "app/ethos/EthosFaqPage.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosCta-yHu4bPKu.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosSections-DFxTfsYu.js",
-      "_EthosPageHero-CM5OWUhV.js",
-      "_plus-Bgqptbhj.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosCta-ScyGMJU0.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosSections-D2l4roW0.js",
+      "_EthosPageHero-BGExzJIl.js",
+      "_plus-D9t_wT6S.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosHomePage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosHomePage-DsAcTRk9.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosHomePage-D5gTipRg.js",
     "name": "EthosHomePage",
     "src": "app/ethos/EthosHomePage.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_EthosAudiences-CpV-tEXE.js",
-      "_EthosMethodSections-notj8UEq.js",
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosPhotoPicker-Bfyp1kM2.js",
+      "_EthosMethodSections-BusZcA7O.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosPhotoPicker-BmbGSROA.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosInquiryPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosInquiryPage-Dwevvnn7.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosInquiryPage-OjN6l8zt.js",
     "name": "EthosInquiryPage",
     "src": "app/ethos/EthosInquiryPage.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosCoaches-CwNNBUWg.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosSections-DFxTfsYu.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosCoaches-gvPSoM1o.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosSections-D2l4roW0.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosLeadersPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosLeadersPage-D9Yi3_gC.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosLeadersPage-B45RmqmM.js",
     "name": "EthosLeadersPage",
     "src": "app/ethos/EthosLeadersPage.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_EthosMethodSections-notj8UEq.js",
-      "_EthosCta-yHu4bPKu.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosPageHero-CM5OWUhV.js",
+      "_EthosMethodSections-BusZcA7O.js",
+      "_EthosCta-ScyGMJU0.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosPageHero-BGExzJIl.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosPrivacyPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosPrivacyPage-CvY7Yfvq.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosPrivacyPage-Y4ufSoc1.js",
     "name": "EthosPrivacyPage",
     "src": "app/ethos/EthosPrivacyPage.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosSections-DFxTfsYu.js",
-      "_EthosPageHero-CM5OWUhV.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosSections-D2l4roW0.js",
+      "_EthosPageHero-BGExzJIl.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosRoot.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosRoot-BVf8GzmI.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosRoot-CEkADCZZ.js",
     "name": "EthosRoot",
     "src": "app/ethos/EthosRoot.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
       "virtual:vinext-app-browser-entry",
-      "_EthosNav-Bmq6PC7_.js",
-      "_MotionConfig-3Ta4IBbo.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_MotionConfig-Ci4zdEax.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "app/ethos/EthosTeamPage.tsx": {
-    "file": "Ethos-Quest/_next/static/chunks/EthosTeamPage-DLoRgS6z.js",
+    "file": "Ethos-Quest/_next/static/chunks/EthosTeamPage-ChzBIhWW.js",
     "name": "EthosTeamPage",
     "src": "app/ethos/EthosTeamPage.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-EZ7h__Ob.js",
-      "_EthosNav-Bmq6PC7_.js",
-      "_EthosCta-yHu4bPKu.js",
-      "_EthosFooter-w5oQb7jA.js",
-      "_EthosSections-DFxTfsYu.js",
-      "_MotionConfig-3Ta4IBbo.js",
+      "_EthosNav-BP4gd8Y_.js",
+      "_EthosCta-ScyGMJU0.js",
+      "_EthosFooter-CbUvsWGF.js",
+      "_EthosSections-D2l4roW0.js",
+      "_MotionConfig-Ci4zdEax.js",
       "_framework-DykHcRpc.js"
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "Ethos-Quest/_next/static/chunks/layout-segment-context-Cg06ltAA.js",
+    "file": "Ethos-Quest/_next/static/chunks/layout-segment-context-LuLMzGL7.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -287,7 +287,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "Ethos-Quest/_next/static/chunks/index-R7Jb2rK9.js",
+    "file": "Ethos-Quest/_next/static/chunks/index-DVUeMK-l.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,

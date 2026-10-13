@@ -27,6 +27,13 @@ Data in app/ethos/EthosBassel.ts. Draft wording for Bassel and Alexia to revise;
 - hamwiconsult.com home and About: https://hamwiconsult.com/about/ — Bank Audi Syria $50M (2005) to $2B assets (2010), about 4% of GDP; first Deputy Chairman of the Damascus Securities Exchange; Chairman, Audi Capital Syria; IFC MENA Fund $165M from 5 partners, Souq.com; founding member of YPO Levant chapter and Syrian–American Business Council; quoted by FT, WSJ, The Economist, NYT; 32 years in financial markets.
 - Open questions for Bassel: BBA institution (LinkedIn lists Texas Wesleyan University; hamwiconsult lists University of North Texas); "20 years as a senior World Bank staffer" on hamwiconsult does not match the IFC dates, so it is not used; DSE rejoin date (Jan 2025 in description vs Jan 2026 role date); title is Chairperson per LinkedIn, while the site previously called him founder.
 
+## Nikolaus Weil
+
+Added October 13, 2026. Copy is paraphrased from his website and LinkedIn; he should review it.
+- About, credentials and career: https://www.nikolausweil.com/about
+- Experience (YPO Berlin founder, SingularityU Germany, Millcreek Ventures, Greenlight Media): https://www.linkedin.com/in/nikolaus-weil-cpcc-85471623/
+- Portrait: from his website (photographer: Madlen Duderstedt), cropped to 4:5. Local image: public/media/coaches/nikolaus-weil.jpg. Confirm permission to use before launch.
+
 ## Our Team page
 
 Data in app/ethos/EthosTeam.ts. Bios drafted October 13, 2026 from the public LinkedIn profiles below (paraphrased, third person); each person should review their own. Headshots (except Bassel's) are each person's own LinkedIn profile photo at the largest size LinkedIn serves (800x800), cropped to 4:5 in public/media/team/; replace with original files when supplied.

@@ -10,6 +10,7 @@ const pages = [
  ['/coaches/severine-jourdain', 'Séverine Jourdain | EthosQuest', 'Séverine Jourdain'],
  ['/coaches/andrea-milwidsky', 'Andrea Milwidsky | EthosQuest', 'Andrea Milwidsky'],
  ['/coaches/bassel-hamwi', 'Bassel Hamwi | EthosQuest', 'Bassel Hamwi'],
+ ['/coaches/nikolaus-weil', 'Nikolaus Weil | EthosQuest', 'Nikolaus Weil'],
  ['/about', 'About | EthosQuest', 'Why EthosQuest'],
  ['/who-we-serve/founder-ceos', 'Founders and CEOs | EthosQuest', 'Growth Without Losing Yourself'],
  ['/who-we-serve/private-equity-ceos', 'Private Equity-Backed CEOs | EthosQuest', 'Leading Against the Clock'],

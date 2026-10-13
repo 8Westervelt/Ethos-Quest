@@ -29,6 +29,16 @@ export const coaches = [
   sources:[['Professional background & education','https://hamwiconsult.com/about/'],['Coaching credentials','https://www.linkedin.com/in/basselhamwi']],
   photoSource:'https://www.ethosquest.com/media/coaches/bassel-hamwi.jpg',
  },
+ {
+  slug:'nikolaus-weil', name:'Nikolaus Weil', role:'Leadership Coach & Facilitator', credential:'CPCC · Trauma-Informed Coach',
+  headline:'The power of choice.',
+  summary:'Three decades of entrepreneurial leadership across media, finance, and executive education, brought to trauma-informed coaching.',
+  focus:['Founders & entrepreneurs','Leadership & team development','Trauma-informed leadership'],
+  bio:['Nikolaus brings more than three decades of entrepreneurial leadership across media, digital technology, and executive education to his coaching. Trained in law at the University of Munich, he founded a boutique film financing business, served as an executive producer on productions including Planet Earth and Deep Blue, and later co-founded a fund management company in telecommunications infrastructure.', 'He founded YPO’s Berlin chapter, co-owned and led Singularity University Germany, and has invested as an angel in media, health, education, and technology. His coaching centers on awareness, resourcing, and alignment: understanding the patterns behind how leaders decide, so they can choose their response rather than react to it.'],
+  qualifications:[['Certified Professional Co-Active Coach (CPCC)','Co-Active Training Institute · ICF standards'],['Trauma-Informed Coach & Consultant','Thomas Hübel · Mobius'],['NLP Practitioner','Neuro-Linguistic Programming'],['Law degree','University of Munich']],
+  sources:[['Professional background & coaching','https://www.nikolausweil.com/about'],['Experience','https://www.linkedin.com/in/nikolaus-weil-cpcc-85471623/']],
+  photoSource:'https://www.ethosquest.com/media/coaches/nikolaus-weil.jpg',
+ },
 ];
 export type EthosCoach = typeof coaches[number];
 export const coachPortrait = (coach: EthosCoach) => '/media/coaches/' + coach.slug + '.jpg';

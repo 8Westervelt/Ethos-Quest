@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-export const ethosLinks = [['Home','/'],['The Methodology','/approach'],['For Leaders','/for-leaders'],['Our Coaches','/coaches'],['About','/about'],['FAQ','/faq']];
+export const ethosLinks = [['Home','/'],['The Methodology','/approach'],['For Leaders','/for-leaders'],['Our Coaches','/coaches'],['Our Team','/team'],['About','/about'],['FAQ','/faq']];
 export function EthosBrand({ footer = false }: { footer?: boolean }) { return <a href={withBase('/')} aria-label="EthosQuest home" className="flex shrink-0 items-center gap-3 transition-opacity hover:opacity-80"><img src="https://ethosquest.com/eq-mark.svg" alt="" referrerPolicy="no-referrer" loading={footer ? 'lazy' : 'eager'} className={'ethos-mark w-auto object-contain ' + (footer ? 'h-[40px]' : 'h-[34px] md:h-[40px] lg:h-[44px]')} /><span className="font-accent text-[17px] font-semibold tracking-[0.12em] md:text-[19px]">EthosQuest</span></a>; }
 export default function EthosNav() {
  const path = usePathname().replace(/(.)\/$/, '$1'); const isActive = (href: string) => path === href || (href === '/coaches' && path.startsWith('/coaches/')); const [open, setOpen] = useState(false); const [scrolled, setScrolled] = useState(false); const { scrollY } = useScroll(); const drawer = useRef<HTMLDivElement>(null);

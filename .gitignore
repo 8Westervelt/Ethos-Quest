@@ -47,3 +47,6 @@ yarn-error.log*
 # Team source files, not for the public repo
 *.pdf
 WhatsApp Image *
+
+# Raw headshots supplied by the team; processed copies live in public/media/team
+headshots/

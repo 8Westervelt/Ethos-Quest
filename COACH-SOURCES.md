@@ -26,3 +26,14 @@ Data in app/ethos/EthosBassel.ts. Draft wording for Bassel and Alexia to revise;
 - LinkedIn profile, experience and certifications: https://www.linkedin.com/in/basselhamwi — Chairperson of EthosQuest (Sep 2026); independent board member, Damascus Securities Exchange, and board member, Syria Gulf Bank (2026); TIGER 21 NYC chair (2025); Forbes Coaches Council (announced in a 2026 post); Harvard Business School Executive Education 2007–2015; CPC (ICF Level 1), Feb 2024.
 - hamwiconsult.com home and About: https://hamwiconsult.com/about/ — Bank Audi Syria $50M (2005) to $2B assets (2010), about 4% of GDP; first Deputy Chairman of the Damascus Securities Exchange; Chairman, Audi Capital Syria; IFC MENA Fund $165M from 5 partners, Souq.com; founding member of YPO Levant chapter and Syrian–American Business Council; quoted by FT, WSJ, The Economist, NYT; 32 years in financial markets.
 - Open questions for Bassel: BBA institution (LinkedIn lists Texas Wesleyan University; hamwiconsult lists University of North Texas); "20 years as a senior World Bank staffer" on hamwiconsult does not match the IFC dates, so it is not used; DSE rejoin date (Jan 2025 in description vs Jan 2026 role date); title is Chairperson per LinkedIn, while the site previously called him founder.
+
+## Our Team page
+
+Data in app/ethos/EthosTeam.ts. Bios drafted October 13, 2026 from the public LinkedIn profiles below (paraphrased, third person); each person should review their own. Headshots (except Bassel's) are each person's own LinkedIn profile photo at the largest size LinkedIn serves (800x800), cropped to 4:5 in public/media/team/; replace with original files when supplied.
+- Alexia Crawford (CEO): https://www.linkedin.com/in/alexia-crawford-/
+- Bassel Hamwi (Founder & Chairman): condensed from the About page (app/ethos/EthosBassel.ts)
+- Paige (Executive): placeholder until details are supplied
+- Alan Marash (Advisor): https://www.linkedin.com/in/amarash/
+- Dan Hoffman (Advisor): https://www.linkedin.com/in/danhoffman3/
+- Andrew Sacks (Advisor): https://www.linkedin.com/in/andrewsacks/ and https://www.agencysacks.com/team
+- Samer Hamwi (Advisor): https://www.linkedin.com/in/samhamwi/ (identified by matching the profile photo supplied by the team)

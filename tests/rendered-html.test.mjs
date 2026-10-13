@@ -6,6 +6,7 @@ const pages = [
  ['/approach', 'The Methodology | EthosQuest', 'Not Performance.'],
  ['/for-leaders', 'For Leaders | EthosQuest', 'of Highest Leverage'],
  ['/coaches', 'Our Coaches | EthosQuest', 'Experience.'],
+ ['/team', 'Our Team | EthosQuest', 'behind the work.'],
  ['/coaches/severine-jourdain', 'Séverine Jourdain | EthosQuest', 'Séverine Jourdain'],
  ['/coaches/andrea-milwidsky', 'Andrea Milwidsky | EthosQuest', 'Andrea Milwidsky'],
  ['/coaches/bassel-hamwi', 'Bassel Hamwi | EthosQuest', 'Bassel Hamwi'],

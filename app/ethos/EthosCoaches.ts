@@ -1,6 +1,6 @@
 export const coaches = [
  {
-  slug:'severine-jourdain', name:'Séverine Jourdain', role:'Executive & Leadership Coach', credential:'MCC · International Coaching Federation',
+  slug:'severine-jourdain', name:'Séverine Jourdain', role:'Executive & Leadership Coach and Advisor', credential:'MCC · International Coaching Federation',
   headline:'Depth of experience. An organizational perspective.',
   summary:'More than two decades supporting senior leaders, leadership teams, and organizations.',
   focus:['Executive leadership','Leadership teams','Organizational development'],
@@ -10,7 +10,7 @@ export const coaches = [
   photoSource:'https://www.imd.org/wp-content/uploads/2023/10/20230109-SeverineJourdain-590x640x2-comp.jpg',
  },
  {
-  slug:'andrea-milwidsky', name:'Andrea Milwidsky', role:'Integral Coach', credential:'MA · Licensed Marriage & Family Therapist',
+  slug:'andrea-milwidsky', name:'Andrea Milwidsky', role:'Integral Coach and Advisor', credential:'MA · Licensed Marriage & Family Therapist',
   headline:'A thoughtful space for personal growth.',
   summary:'A collaborative approach shaped by integral coaching, education, and a background in psychotherapy.',
   focus:['Personal growth','Self-compassion','Life transitions'],

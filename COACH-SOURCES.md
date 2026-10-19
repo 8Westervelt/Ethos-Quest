@@ -40,7 +40,7 @@ Data in app/ethos/EthosTeam.ts. Bios drafted October 13, 2026 from the public Li
 - Alexia Crawford (CEO): https://www.linkedin.com/in/alexia-crawford-/
 - Bassel Hamwi (Founder & Chairman): condensed from the About page (app/ethos/EthosBassel.ts)
 - Paige (Executive): placeholder until details are supplied
-- Alan Marash (Advisor): https://www.linkedin.com/in/amarash/
-- Dan Hoffman (Advisor): https://www.linkedin.com/in/danhoffman3/
-- Andrew Sacks (Advisor): https://www.linkedin.com/in/andrewsacks/ and https://www.agencysacks.com/team
-- Samer Hamwi (Advisor): https://www.linkedin.com/in/samhamwi/ (identified by matching the profile photo supplied by the team)
+- Alan Marash (Board Member): https://www.linkedin.com/in/amarash/
+- Dan Hoffman (Advisory Board Member): https://www.linkedin.com/in/danhoffman3/
+- Andrew Sacks (Advisory Board Member): https://www.linkedin.com/in/andrewsacks/ and https://www.agencysacks.com/team
+- Samer Hamwi (Advisory Board Member): https://www.linkedin.com/in/samhamwi/ (identified by matching the profile photo supplied by the team)

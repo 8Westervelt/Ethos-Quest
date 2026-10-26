@@ -44,6 +44,9 @@ yarn-error.log*
 # GitHub Pages export (published to the gh-pages branch)
 /pages-out/
 
+# Hand-off package for the EthosQuest web team (npm run export:release)
+/release/
+
 # Team source files, not for the public repo
 *.pdf
 WhatsApp Image *

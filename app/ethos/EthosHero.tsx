@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import EthosButton from './EthosButton';
 import { ethosHeroOptions } from './EthosMedia';
+import { ethosPreview } from './EthosPath';
 export const ethosEase = [0.16,1,0.3,1] as const;
 export function entrance(delay: number) { return { initial: { opacity: 0, y: 18 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.9, delay, ease: ethosEase } }; }
 export default function EthosHero() {
@@ -30,7 +31,7 @@ export default function EthosHero() {
   </div>
   {!reduced && <button type="button" onClick={() => { if (playing) { setPaused(true); video.current?.pause(); } else { setPaused(false); video.current?.play().catch(() => setPlaying(false)); } }} aria-label={playing ? 'Pause background film' : 'Play background film'} className="absolute right-6 top-28 flex items-center gap-2 border border-[#F7F4EE]/40 bg-[#132040]/25 px-3 py-2 text-[10px] uppercase tracking-[0.12em] text-[#F7F4EE] backdrop-blur-md md:right-[48px]">{playing ? <Pause size={10} /> : <Play size={10} />}{playing ? 'Pause film' : 'Play film'}</button>}
   <div className="absolute left-6 top-28 flex flex-col items-start gap-2 md:left-[48px]">
-   {ethosHeroOptions.length > 1 && <div role="group" aria-label="Hero film options" className="flex items-center border border-[#F7F4EE]/40 bg-[#132040]/25 text-[10px] uppercase tracking-[0.12em] text-[#F7F4EE] backdrop-blur-md"><button type="button" onClick={() => step(-1)} aria-label="Previous hero film" className="px-2.5 py-2 hover:bg-[#F7F4EE]/15"><ChevronLeft size={14} /></button><span aria-live="polite" className="whitespace-nowrap px-1">Option {option + 1} of {ethosHeroOptions.length}: {hero.label}</span><button type="button" onClick={() => step(1)} aria-label="Next hero film" className="px-2.5 py-2 hover:bg-[#F7F4EE]/15"><ChevronRight size={14} /></button></div>}
+   {ethosPreview && ethosHeroOptions.length > 1 && <div role="group" aria-label="Hero film options" className="flex items-center border border-[#F7F4EE]/40 bg-[#132040]/25 text-[10px] uppercase tracking-[0.12em] text-[#F7F4EE] backdrop-blur-md"><button type="button" onClick={() => step(-1)} aria-label="Previous hero film" className="px-2.5 py-2 hover:bg-[#F7F4EE]/15"><ChevronLeft size={14} /></button><span aria-live="polite" className="whitespace-nowrap px-1">Option {option + 1} of {ethosHeroOptions.length}: {hero.label}</span><button type="button" onClick={() => step(1)} aria-label="Next hero film" className="px-2.5 py-2 hover:bg-[#F7F4EE]/15"><ChevronRight size={14} /></button></div>}
    <button type="button" onClick={() => setShowTagline(s => !s)} aria-pressed={!showTagline} className="border border-[#F7F4EE]/40 bg-[#132040]/25 px-3 py-2 text-[10px] uppercase tracking-[0.12em] text-[#F7F4EE] backdrop-blur-md hover:bg-[#F7F4EE]/15">{showTagline ? 'Hide' : 'Show'} “Executive Coaching” line</button>
   </div>
  </section>;

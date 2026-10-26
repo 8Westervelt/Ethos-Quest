@@ -1,14 +1,15 @@
-// Builds a static copy of the site for GitHub Pages, served from https://<user>.github.io/<repo>/.
-// Usage: npm run export:pages   (output in pages-out/, published to the gh-pages branch)
-// The real deployment is unaffected: basePath is only set for this build (see next.config.ts).
+// Builds a static copy of the site.
+// Preview:  npm run export:pages    served from https://<user>.github.io/<repo>/ (output in pages-out/, published to gh-pages)
+// Release:  npm run export:release  served from the domain root, e.g. ethosquest.com (output in release/site/)
+// PAGES_BASE_PATH sets the subfolder ('' for the domain root) and PAGES_OUT the output folder.
 import { execSync } from 'node:child_process';
 import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const root = process.cwd();
-const base = process.env.PAGES_BASE_PATH || '/Ethos-Quest';
-const out = path.join(root, 'pages-out');
+const base = process.env.PAGES_BASE_PATH ?? '/Ethos-Quest';
+const out = path.join(root, process.env.PAGES_OUT || 'pages-out');
 
 console.log(`Building with basePath ${base}...`);
 execSync('npx vinext build', { stdio: 'inherit', env: { ...process.env, PAGES_BASE_PATH: base, WRANGLER_LOG_PATH: '.wrangler/wrangler.log' } });
@@ -28,10 +29,11 @@ const routes = findRoutes(path.join(root, 'app'));
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 // Compiled code is emitted under dist/client/<base>/; public files (media, icons) sit at dist/client/.
+// At the domain root the two share dist/client/, and the _headers cache rules (Cloudflare) are kept.
 const client = path.join(root, 'dist', 'client');
-cpSync(path.join(client, base.slice(1)), out, { recursive: true });
+if (base) cpSync(path.join(client, base.slice(1)), out, { recursive: true });
 for (const name of readdirSync(client)) {
- if (name === base.slice(1) || name === '_headers' || name.endsWith('.json')) continue;
+ if ((base && (name === base.slice(1) || name === '_headers')) || name.endsWith('.json')) continue;
  cpSync(path.join(client, name), path.join(out, name), { recursive: true });
 }
 
@@ -49,4 +51,4 @@ for (const route of routes) {
 writeFileSync(path.join(out, '404.html'), await render('/__not-found'));
 // Without this, GitHub Pages runs Jekyll, which drops the _next folder.
 writeFileSync(path.join(out, '.nojekyll'), '');
-console.log(`Exported ${routes.length} pages to pages-out/ (${existsSync(path.join(out, '_next')) ? 'with' : 'MISSING'} _next assets).`);
+console.log(`Exported ${routes.length} pages to ${path.relative(root, out)}/ (${existsSync(path.join(out, '_next')) ? 'with' : 'MISSING'} _next assets).`);

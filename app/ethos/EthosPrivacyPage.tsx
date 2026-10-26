@@ -2,11 +2,17 @@
 import EthosPageHero from './EthosPageHero';
 import EthosFooter from './EthosFooter';
 import { EthosSection, ethosBody } from './EthosSections';
-const sections = [
- ['Information We Collect', 'Placeholder: describe the information collected through private inquiries and use of this website.'],
- ['How We Use It', 'Placeholder: describe the purposes for which inquiry information and website data are used.'],
- ['Confidentiality', 'Placeholder: describe applicable confidentiality practices and any circumstances in which information may be shared.'],
- ['Data Retention', 'Placeholder: specify retention periods and how requests relating to personal information are handled.'],
- ['Contact', 'Placeholder: add the appropriate privacy contact details and the date this policy takes effect.'],
+// The policy in force on ethosquest.com (effective June 26, 2026), carried over unchanged into the new design.
+const mail = <a href="mailto:hello@ethosquest.com" className="underline decoration-[#9E1B34]/50 underline-offset-4 hover:text-[#9E1B34]">hello@ethosquest.com</a>;
+const sections: [string, React.ReactNode[], string[]?][] = [
+ ['1. Overview', ['Ethos Quest (“we,” “our,” or “us”) is committed to protecting your privacy. This policy describes how we collect, use, and safeguard information when you visit our website or contact us through our inquiry process.']],
+ ['2. Information We Collect', ['We collect information you provide directly, including:', 'We may also collect standard technical data such as browser type, device type, and pages visited through standard analytics tools.'], ['Your name, email address, and professional role when you submit an inquiry', 'Any details you voluntarily share in your inquiry message', 'Communications you send to us via email']],
+ ['3. How We Use Your Information', ['We use the information we collect to:', 'We do not use your information for advertising, and we do not sell or rent your personal data to any third party.'], ['Respond to your inquiry and manage the engagement process', 'Maintain records of our correspondence and engagement', 'Improve the quality and relevance of our website']],
+ ['4. Confidentiality', ['Any information shared as part of a coaching engagement is held in strict confidence and is not subject to disclosure except where required by law. Our practitioners operate under professional obligations of confidentiality.']],
+ ['5. Data Retention', ['We retain inquiry and engagement records for as long as necessary to fulfill the purposes described in this policy, or as required by applicable law. You may request deletion of your personal data at any time by contacting us directly.']],
+ ['6. Third-Party Services', ['Our website may use third-party analytics tools. These services may collect anonymized usage data. We do not share personally identifiable information with third-party analytics providers.']],
+ ['7. Your Rights', [<>You have the right to access, correct, or request deletion of any personal information we hold about you. To exercise these rights, contact us at {mail}.</>]],
+ ['8. Changes to This Policy', ['We may update this policy from time to time. Material changes will be noted with a revised effective date. Continued use of our website following any update constitutes acceptance of the revised policy.']],
+ ['9. Contact', [<>For privacy-related questions, contact us at {mail}.</>]],
 ];
-export default function EthosPrivacyPage() { return <><main id="main-content"><EthosPageHero label="Legal" lines={['Privacy Policy']} lede="How EthosQuest handles the information you share with us." /><EthosSection className="pt-0 md:pt-0 lg:pt-0"><div className="max-w-[800px]"><p className={ethosBody + ' mb-12 border-l-2 border-[#9E1B34] pl-6'}>Draft placeholder. The following sections are awaiting the final privacy policy.</p>{sections.map(([heading, body]) => <section key={heading} className="mb-10"><h2 className="font-accent text-[26px] leading-[1.2] md:text-[30px]">{heading}</h2><p className={ethosBody + ' mt-4'}>{body}</p></section>)}</div></EthosSection></main><EthosFooter /></>; }
+export default function EthosPrivacyPage() { return <><main id="main-content"><EthosPageHero label="Legal" lines={['Privacy Policy']} lede="How EthosQuest handles the information you share with us." /><EthosSection className="pt-0 md:pt-0 lg:pt-0"><div className="max-w-[800px]"><p className={ethosBody + ' mb-12 border-l-2 border-[#9E1B34] pl-6'}>Effective date: June 26, 2026</p>{sections.map(([heading, [intro, after], list]) => <section key={heading} className="mb-10"><h2 className="font-accent text-[26px] leading-[1.2] md:text-[30px]">{heading}</h2><p className={ethosBody + ' mt-4'}>{intro}</p>{list && <ul className={ethosBody + ' mt-4 list-disc space-y-2 pl-6 marker:text-[#9E1B34]'}>{list.map(item => <li key={item}>{item}</li>)}</ul>}{after && <p className={ethosBody + ' mt-4'}>{after}</p>}</section>)}</div></EthosSection></main><EthosFooter /></>; }

@@ -67,7 +67,7 @@ components. The colors and fonts are listed under "What changed".
 serves `/about`), plus `_next/`, `media/` and the brand files. To use it, remove **only** the matching `.astro` pages
 (`index`, `about`, `approach`, `for-leaders`, `faq`, `private-inquiry`, `privacy`). Keep your onboarding, payment and `api/`
 routes. Then copy the contents of `site/` into `public/`, and build and deploy as usual. Two things to know:
-- `site/` includes its own `404.html` and `_headers` (long-term caching for `/_next/static/`). Merge those with yours.
+- `site/` includes its own `404.html` and `_headers` (long-term caching for `/_next/static/`, one week for `/media/`). Merge those with yours.
 - Fonts (Cinzel and Raleway) load from Google Fonts, as they do today.
 
 ## The inquiry form
@@ -95,6 +95,9 @@ content-type: application/json
 2. Send one inquiry from `/private-inquiry` and one from a coach page ("Request a Discovery Call with ..."). Confirm both arrive
    the way inquiries arrive today, and that the coach one starts with "Requested coach:".
 3. Check one page on a phone.
+4. Optional: run https://pagespeed.web.dev/ on the home page once it's live. On our tests (Lighthouse, mobile) pages
+   load their main content in about 3 to 4 seconds on a slow 4G phone; the home page is about 4.5 seconds because the
+   city film counts as the main content once it starts.
 
 ## What changed
 
@@ -172,6 +175,7 @@ The package currently uses the first option everywhere. To choose different ones
 - **Send us your picks**, for example "For Leaders hero: Wall Street". We'll lock them in and send an updated package.
 - **Change them yourselves:**
   - Photos: in `app/ethos/EthosPhotoOptions.ts`, move the chosen photo to the top of its spot's list, or delete the others.
+    Every option already has its phone-sized copies, so nothing else is needed.
   - Hero film: same, in `ethosHeroOptions` in `app/ethos/EthosMedia.ts`.
   - "Executive Coaching" line: set `showTagline` in `app/ethos/EthosHero.tsx` to `false` to hide it.
 
@@ -186,6 +190,10 @@ The package currently uses the first option everywhere. To choose different ones
   - `EthosBassel.ts`: About.
 - **Photos and video:** in `public/media/`. The choice for each page is set in `EthosMedia.ts` and `EthosPhotoOptions.ts`.
   The site uses the first photo listed for each slot.
+- **Phone-sized photos:** each photo has smaller WebP copies beside it (`name-800.webp`, `name-1200.webp` and one at full
+  width), and phones download the size they need. After adding or replacing a photo file, run
+  `python scripts/make-image-sizes.py` (needs Python with Pillow) to make its copies. A photo without copies still works;
+  it just downloads at full size.
 - **Colors and type:** in `app/ethos/EthosStyles.css` and the Tailwind classes in each component.
 
 Contact: Adam Alessi-Sheinman, 8westervelt. We're happy to answer questions or make changes on our side.

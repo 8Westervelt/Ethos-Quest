@@ -3,7 +3,7 @@
 // Release:  npm run export:release  served from the domain root, e.g. ethosquest.com (output in release/site/)
 // PAGES_BASE_PATH sets the subfolder ('' for the domain root) and PAGES_OUT the output folder.
 import { execSync } from 'node:child_process';
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, readFileSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -51,4 +51,6 @@ for (const route of routes) {
 writeFileSync(path.join(out, '404.html'), await render('/__not-found'));
 // Without this, GitHub Pages runs Jekyll, which drops the _next folder.
 writeFileSync(path.join(out, '.nojekyll'), '');
+// Photos and films keep their names when unchanged, so let browsers reuse them for a week (Cloudflare reads _headers).
+if (!base) writeFileSync(path.join(out, '_headers'), readFileSync(path.join(out, '_headers'), 'utf8').trimEnd() + '\n\n/media/*\n  Cache-Control: public, max-age=604800\n');
 console.log(`Exported ${routes.length} pages to ${path.relative(root, out)}/ (${existsSync(path.join(out, '_next')) ? 'with' : 'MISSING'} _next assets).`);

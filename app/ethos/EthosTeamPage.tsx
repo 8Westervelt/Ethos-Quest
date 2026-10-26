@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Mail, X } from 'lucide-react';
-import { withBase } from './EthosPath';
+import { photoSrc } from './EthosPath';
 import EthosReveal from './EthosReveal';
 import EthosFooter from './EthosFooter';
 import EthosCta from './EthosCta';
@@ -15,7 +15,7 @@ import { teamLeadership, teamAdvisors, teamInitials, type EthosTeamMember } from
 function Portrait({ member, large = false }: { member: EthosTeamMember; large?: boolean }) {
  return <motion.div layoutId={'team-photo-' + member.slug} className="relative aspect-[4/5] w-full overflow-hidden bg-[#132040]">
   {member.photo
-   ? <img src={withBase(member.photo)} alt={member.name} className={'h-full w-full object-cover transition duration-700 ' + (large ? '' : 'group-hover:scale-[1.03]')} />
+   ? <img {...photoSrc(member.photo, '(min-width: 768px) 40vw, 100vw')} alt={member.name} className={'h-full w-full object-cover transition duration-700 ' + (large ? '' : 'group-hover:scale-[1.03]')} />
    : <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center">
       <span className="absolute inset-4 border border-[#F7F4EE]/15" />
       <span className={'font-accent text-[#F7F4EE]/80 ' + (large ? 'text-[88px]' : 'text-[60px]')}>{teamInitials(member)}</span>

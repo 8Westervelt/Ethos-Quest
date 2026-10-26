@@ -1,5 +1,5 @@
 'use client';
-import { withBase } from './EthosPath';
+import { withBase, photoSrc } from './EthosPath';
 import { useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion, useScroll } from 'framer-motion';
 import { ArrowUpRight, Plus } from 'lucide-react';
@@ -72,7 +72,7 @@ export function EthosArc({ full = false }: { full?: boolean }) {
 export function EthosCapacity({ full = false }: { full?: boolean }) {
  // The full version (Methodology page) draws from its own photos so the two pages never repeat.
  const { photo, picker } = usePhotoOption(full ? 'capacityMethod' : 'capacity', 'right-4 top-4 md:right-8 md:top-8');
- return <section className="ethos-dark relative isolate overflow-hidden px-6 py-28 md:px-12 md:py-40 lg:px-20">{picker}<img src={withBase(photo.src)} alt="" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center] saturate-[0.85]" /><div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(18,26,36,0.9)_0%,rgba(18,26,36,0.72)_55%,rgba(18,26,36,0.35)_100%)]" />
+ return <section className="ethos-dark relative isolate overflow-hidden px-6 py-28 md:px-12 md:py-40 lg:px-20">{picker}<img {...photoSrc(photo.src)} alt="" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center] saturate-[0.85]" /><div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(18,26,36,0.9)_0%,rgba(18,26,36,0.72)_55%,rgba(18,26,36,0.35)_100%)]" />
   <EthosReveal className={wrap}><div className="max-w-[760px]"><p className="font-accent text-[12px] uppercase tracking-[0.26em] text-[#E4A3AE]">The Core Capacity</p><div className="mt-6"><Rule /></div><h2 className="font-accent mt-10 text-[32px] leading-[1.15] md:text-[46px] lg:text-[54px]">{methodCapacity.statement}</h2><p className="mt-10 max-w-[620px] text-[18px] leading-[1.75] text-[#F7F4EE]/88">{methodCapacity.body}</p>{full && <p className="mt-6 max-w-[600px] text-[16px] leading-[1.8] text-[#F7F4EE]/72">{methodCapacity.close}</p>}</div></EthosReveal>
  </section>;
 }

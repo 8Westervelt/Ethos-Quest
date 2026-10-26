@@ -25,4 +25,5 @@
 .ethos-root .ethos-banner .ethos-mark { filter: brightness(0) invert(1); opacity: 1; }
 .ethos-root .ethos-banner :where(a,button):focus-visible { outline-color: #fff; }
 .ethos-root .ethos-sand { background: var(--sand); }
-@media (prefers-reduced-motion: reduce) { .ethos-root *, .ethos-root *::before, .ethos-root *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+@keyframes ethos-rise { from { opacity: 0; transform: translateY(18px); } }
+@media (prefers-reduced-motion: reduce) { .ethos-root *, .ethos-root *::before, .ethos-root *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-delay: 0s !important; } }

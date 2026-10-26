@@ -1,7 +1,7 @@
 export const ethosMedia = {
  heroFilm: '/media/dawn.mp4',
  heroPoster: '/media/dawn-poster.jpg',
- notebook: '/media/ethos-notebook.png',
+ notebook: '/media/ethos-notebook.jpg',
  atrium: '/media/atrium.jpg',
  facade: '/media/facade.jpg',
  windowFigure: '/media/window-figure.jpg',

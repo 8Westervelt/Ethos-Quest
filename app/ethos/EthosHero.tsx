@@ -1,5 +1,5 @@
 'use client';
-import { withBase } from './EthosPath';
+import { withBase, photoSrc } from './EthosPath';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -7,19 +7,31 @@ import EthosButton from './EthosButton';
 import { ethosHeroOptions } from './EthosMedia';
 import { ethosPreview } from './EthosPath';
 export const ethosEase = [0.16,1,0.3,1] as const;
-export function entrance(delay: number) { return { initial: { opacity: 0, y: 18 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.9, delay, ease: ethosEase } }; }
+// A CSS animation (ethos-rise in EthosStyles.css), so headlines show on first paint instead of waiting for the page's JavaScript.
+export function entrance(delay: number) { return { style: { animation: `ethos-rise 0.9s cubic-bezier(${ethosEase.join(',')}) ${delay}s both` } }; }
 export default function EthosHero() {
  const video = useRef<HTMLVideoElement>(null);
  const reduced = useReducedMotion();
  const [option, setOption] = useState(0);
+ const [playing, setPlaying] = useState(-1);
  // Preview-only review control: lets the team compare the hero with and without the small line above the headline.
  const [showTagline, setShowTagline] = useState(true);
  const hero = ethosHeroOptions[option];
  const step = (by: number) => setOption(i => (i + by + ethosHeroOptions.length) % ethosHeroOptions.length);
- useEffect(() => { const el = video.current; if (!el) return; el.playbackRate = 0.85; if (reduced === false) el.play().catch(() => {}); else el.pause(); }, [reduced, option]);
+ // The film loads only once the page has, so it never competes with the first paint; the still shows until it plays.
+ // On portrait screens the still is cropped to fill the height, so `sizes` asks for the full-width file; a softer
+ // still would also let Chrome count the film, not the still, as the page's main paint (LCP).
+ useEffect(() => {
+  const el = video.current; if (!el) return;
+  el.defaultPlaybackRate = el.playbackRate = 0.85;
+  if (reduced !== false) { el.pause(); return; }
+  const start = () => { el.play().catch(() => {}); };
+  if (document.readyState === 'complete') start(); else { window.addEventListener('load', start, { once: true }); return () => window.removeEventListener('load', start); }
+ }, [reduced, option]);
+ const position = { objectPosition: hero.original ? 'center' : hero.focus ?? 'center top' };
  return <section className="relative isolate flex min-h-[720px] w-full flex-col justify-end overflow-hidden px-6 pb-14 pt-40 md:min-h-[92svh] md:px-[48px] md:pb-20 min-[1440px]:px-[64px]">
   {/* Starts below the fixed banner (75/81/85px tall) so the banner never hides the skyline; the crop comes off the bottom by default. */}
-  <div className={'absolute -z-20 overflow-hidden ' + (hero.original ? 'inset-0' : 'inset-x-0 bottom-0 top-[75px] md:top-[81px] lg:top-[85px]')}><video key={option} ref={video} loop muted playsInline preload="metadata" poster={withBase(hero.poster)} style={{ objectPosition: hero.original ? 'center' : hero.focus ?? 'center top' }} className="h-full w-full object-cover"><source src={withBase(hero.film)} type="video/mp4" /></video></div>
+  <div className={'absolute -z-20 overflow-hidden ' + (hero.original ? 'inset-0' : 'inset-x-0 bottom-0 top-[75px] md:top-[81px] lg:top-[85px]')}><img key={hero.poster} {...photoSrc(hero.poster, '(orientation: portrait) 180vh, 100vw')} alt="" fetchPriority="high" style={position} className="absolute inset-0 h-full w-full object-cover" /><video key={option} ref={video} loop muted playsInline preload="none" aria-hidden="true" onPlaying={() => setPlaying(option)} style={position} className={'absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ' + (playing === option ? 'opacity-100' : 'opacity-0')}><source src={withBase(hero.film)} type="video/mp4" /></video></div>
   {/* Two washes: the original top-to-bottom tint, plus a left-side shade so the copy reads over bright footage. */}
   <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(90deg, rgba(19,32,64,0.62) 0%, rgba(19,32,64,0.38) 45%, rgba(19,32,64,0) 75%), linear-gradient(180deg, rgba(19,32,64,0.28) 0%, rgba(19,32,64,0.12) 40%, rgba(19,32,64,0.55) 100%)' }} />
   <div className="mx-auto w-full max-w-[1280px] text-[#F7F4EE]">

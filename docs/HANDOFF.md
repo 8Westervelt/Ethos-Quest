@@ -19,7 +19,7 @@ Prepared by 8westervelt for the EthosQuest web team, October 26, 2026.
 |---|---|
 | `site/` | The built website. Deploy this. |
 | `assets/` | All photos, video and brand files on their own, with `MEDIA-CREDITS.md`. |
-| `source/` | The source code (Next.js on Vite), if you ever want to change and rebuild it. Also public at https://github.com/8Westervelt/Ethos-Quest. |
+| `source/` | The source code (Next.js on Vite), if you ever want to change and rebuild it. To keep the download small, its media is in `assets/media`; copy that to `source/public/media` before building. Also public at https://github.com/8Westervelt/Ethos-Quest. |
 | `HANDOFF.md` | This guide. |
 
 ## Deploying

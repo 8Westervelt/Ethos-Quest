@@ -156,9 +156,24 @@ None of these stop a release. Each is a small text or photo change.
   - Paige's card shows "Portrait to come" and "Bio to come".
   - Profiles link to LinkedIn only. The EthosQuest email addresses haven't been supplied yet.
 - **Photos:**
-  - Several page photos were picked from shortlists. The site uses the first photo in each shortlist; say if any should change.
+  - Several page photos have a shortlist of options. The site uses the first option in each; see "Choosing photos" below.
   - Andrea Milwidsky's portrait is a casual photo.
 - **Copy:** most of the copy is a draft that Alexia planned to revise.
+
+## Choosing photos
+
+Fifteen photo spots on the site have a shortlist (40 photos in all). The home page also has five hero films and an
+optional "Executive Coaching" line above the headline. On the preview site
+(https://8westervelt.github.io/Ethos-Quest/), arrows on each of these let you flip through the options, and each option has
+a name. These arrows appear only on the preview, never on the live site.
+
+The package currently uses the first option everywhere. To choose different ones, either:
+
+- **Send us your picks**, for example "For Leaders hero: Wall Street". We'll lock them in and send an updated package.
+- **Change them yourselves:**
+  - Photos: in `app/ethos/EthosPhotoOptions.ts`, move the chosen photo to the top of its spot's list, or delete the others.
+  - Hero film: same, in `ethosHeroOptions` in `app/ethos/EthosMedia.ts`.
+  - "Executive Coaching" line: set `showTagline` in `app/ethos/EthosHero.tsx` to `false` to hide it.
 
 ## Where things live
 
